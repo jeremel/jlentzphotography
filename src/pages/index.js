@@ -4,17 +4,31 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import styled from 'styled-components'
+
+const IndexDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    padding-top: .5rem;
+    padding-bottom: 1rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
+`
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+    <IndexDiv>
       <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+      <Link to="/about/">About Jereme</Link>
+    </IndexDiv>
   </Layout>
 )
 
