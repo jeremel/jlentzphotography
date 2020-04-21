@@ -29,7 +29,7 @@ const Content = styled.div`
   }
 
   footer {
-    font-size: 1rem;
+    font-size: 1.25rem;
     padding: 1.25rem;
   }
 `

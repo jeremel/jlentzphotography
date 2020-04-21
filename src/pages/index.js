@@ -9,6 +9,7 @@ import styled from 'styled-components'
 const IndexDiv = styled.div`
   width: 90%;
   text-align: center;
+  font-size: 2rem;
 
   img {
     padding-top: .25rem;
@@ -17,6 +18,11 @@ const IndexDiv = styled.div`
 
   a {
     text-decoration: none;
+    color: #ff521f;
+  }
+
+  a:hover {
+    opacity: 0.75;
   }
 `
 
