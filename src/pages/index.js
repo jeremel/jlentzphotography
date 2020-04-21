@@ -1,8 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 import styled from 'styled-components'
 
@@ -20,14 +20,29 @@ const IndexDiv = styled.div`
   }
 `
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <IndexDiv>
-      <Image />
-      <Link to="/about/">About Jereme</Link>
-    </IndexDiv>
-  </Layout>
-)
+const IndexPage = () => {
+  
+  const data = useStaticQuery(graphql`
+    query {
+      indexImage: file(relativePath: { eq: "EaglesSBParade.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <IndexDiv>
+        <Img fluid={data.indexImage.childImageSharp.fluid} />
+        <Link to="/about/">About Jereme</Link>
+      </IndexDiv>
+    </Layout>
+  )
+}
 
 export default IndexPage
