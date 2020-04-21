@@ -7,13 +7,11 @@ import SEO from "../components/seo"
 import styled from 'styled-components'
 
 const IndexDiv = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: 90%;
+  text-align: center;
 
   img {
-    padding-top: .5rem;
+    padding-top: .25rem;
     padding-bottom: 1rem;
   }
 

@@ -1,5 +1,4 @@
 import React from "react"
-
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
@@ -15,16 +14,16 @@ const ImageGallery = styled.div`
     }
 `
 
-const Croatia = () => {
+const Outdoors = () => {
   
     const data = useStaticQuery(graphql`
-        query Images {
-            images: allFile(filter: {relativeDirectory: {eq: "Croatia"}}) {
+        query JerseyImages {
+            images: allFile(filter: {relativeDirectory: {eq: "JerseyOutdoors"}}) {
                 nodes {
                 id
                 childImageSharp {
-                    fluid {
-                      ...GatsbyImageSharpFluid
+                    fluid(maxWidth: 800) {
+                        ...GatsbyImageSharpFluid
                     }
                 }
             }
@@ -36,16 +35,19 @@ const Croatia = () => {
 
   return (
         <Layout>
-            <SEO title="Croatia" />
+            <SEO title="Jersey Outdoors" />
             <ImageGallery>
-                <h1>Zadar & Dubrovnik</h1>
+                <h1>Jersey Outdoors</h1>
                 
                 {data.images.nodes.map(image => (
-                    <Img key={image.id} fluid={image.childImageSharp.fluid} />
+                    <Img 
+                        key={image.id} 
+                        fluid={image.childImageSharp.fluid}
+                    />
                 ))}
             </ImageGallery>
         </Layout>
     )
   }
 
-export default Croatia
+export default Outdoors

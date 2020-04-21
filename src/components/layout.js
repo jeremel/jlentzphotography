@@ -49,7 +49,7 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <Content>
-        <main>{children}</main>
+        {children}
         <footer>
           © {new Date().getFullYear()} {` `} Jereme Lentz
         </footer>

@@ -9,6 +9,7 @@ const HeaderDiv = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   margin:0;
   padding:0;
   font-size: 1.5rem;
@@ -30,8 +31,8 @@ const HeaderDiv = styled.div`
   }
 
   ul {
-    width: 100%;
-    max-width: 200px;
+    width: 90%;
+    max-width: 700px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -63,6 +64,7 @@ const Header = ({ siteTitle }) => (
     </h1>
     <ul>
       <li><Link to="/croatia">Croatia</Link></li>
+      <li><Link to="/outdoors">Jersey Outdoors</Link></li>
       <li><Link to="/about">About</Link></li>
     </ul>
   </HeaderDiv>
