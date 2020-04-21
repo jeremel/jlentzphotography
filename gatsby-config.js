@@ -5,18 +5,18 @@ module.exports = {
     author: `@jeremel`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+      trackingId: "UA-164124174-1",
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
-      },
-      {
-        resolve: `gatsby-plugin-google-analytics`,
-        options: {
-          trackingId: "UA-164124174-1",
-        },
       },
     },
     `gatsby-transformer-sharp`,
