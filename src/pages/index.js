@@ -12,7 +12,8 @@ const IndexDiv = styled.div`
   font-size: 2rem;
 
   img {
-    padding-top: .25rem;
+    width: 100%;
+    padding-top: 1rem;
     padding-bottom: 1rem;
   }
 
