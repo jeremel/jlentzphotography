@@ -99,6 +99,7 @@ const Header = ({ siteTitle }) => (
       <li><Link to="/outdoors">Jersey Outdoors</Link></li>
       <li><Link to="/oystercreek">Oyster Creek</Link></li>
       <li><Link to="/pioneertown">Pioneertown</Link></li>
+      <li><Link to="/rocky">Rocky</Link></li>
       <li><Link to="/about">About</Link></li>
     </ul>
   </HeaderDiv>
