@@ -8,11 +8,12 @@ import styled from 'styled-components'
 
 const IndexDiv = styled.div`
   width: 90%;
+  height: 100%;
   text-align: center;
   font-size: 2rem;
 
   img {
-    width: 100%;
+    max-width: 800px;
     padding-top: 1rem;
     padding-bottom: 1rem;
   }

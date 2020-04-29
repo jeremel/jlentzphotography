@@ -16,6 +16,7 @@ const HeaderDiv = styled.div`
 
   h1 {
     padding-top: 1rem;
+    letter-spacing: .075rem;
   }
 
   a {
@@ -52,6 +53,37 @@ const HeaderDiv = styled.div`
 
   ul li a:hover {
     text-decoration: underline dotted;
+    color: #fff;
+    font-size: 1.5rem;
+  }
+
+  @media(max-width: 600px) {
+    ul {
+      width: 90%;
+      max-width: 700px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0 0 1.75rem 0;
+    }
+  
+    ul li {
+      list-style: none;
+      font-size: 1.25rem
+    }
+  
+    ul li a {
+      text-decoration: none;
+      font-family: Georgia, serif;
+    }
+  
+    ul li a:hover {
+      text-decoration: underline dotted;
+      background-color: white;
+      padding: .1rem;
+      border-radius: 2.5px;
+    }
   }
 `
 
