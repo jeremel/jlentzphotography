@@ -46,7 +46,7 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <IndexDiv>
-        {/* <Img fluid={data.indexImage.childImageSharp.fluid} /> */}
+        <Img fluid={data.indexImage.childImageSharp.fluid} />
         <Link to="/about/">About Jereme</Link>
       </IndexDiv>
     </Layout>
